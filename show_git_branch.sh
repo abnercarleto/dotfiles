@@ -1,3 +1,5 @@
+# from http://www.akitaonrails.com/2012/08/13/ruby-e-rails-no-ubuntu-12-04-lts-precise-pangolin
+
 ESC="\033" # This is the escape sequence
 NO_COLOR="$ESC[0m"
 IRED="$ESC[1;31m" # ANSI color code for intense/bold red
