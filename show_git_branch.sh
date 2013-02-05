@@ -15,7 +15,7 @@ function parse_git_branch {
 # from http://ariejan.net/2010/04/25/ruby-version-and-gemset-in-your-bash-prompt-yes-sir
 function rvm_version {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
-  [ "$gemset" != "" ] && gemset="@$gemset"
+  [ "$gemset" != "" ] && gemset="@$gemset" || gemset='@(default)'
   local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
   [ "$version" != "" ] && version="$version"
   local full="$version$gemset"
