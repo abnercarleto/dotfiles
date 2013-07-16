@@ -16,7 +16,7 @@ function parse_git_branch {
 function rvm_version {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
   [ "$gemset" != "" ] && gemset="@$gemset" || gemset='@(default)'
-  local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2 "-" $3}')
+  local version=$(echo $MY_RUBY_HOME | awk -F'/' '{print $NF}')
   [ "$version" != "" ] && version="$version"
   local full="$version$gemset"
   [ "$full" != "" ] && echo "${full}:" # the colon at the end is a delimiter, you could use a space instead
